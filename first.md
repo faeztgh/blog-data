@@ -1,6 +1,6 @@
 # A demo of `react-markdown`
 
-![Getting Started](https://nestjs.com/img/logo-small.svg")
+![Getting Started](https://nestjs.com/img/logo-small.svg)
 `react-markdown` is a markdown component for React.
 
 👉 Changes are re-rendered as you type.
