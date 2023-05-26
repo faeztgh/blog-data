@@ -1,7 +1,6 @@
 # A demo of `react-markdown`
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+
+![Getting Started]([./images/img.jpg](https://nestjs.com/img/logo-small.svg"))
 `react-markdown` is a markdown component for React.
 
 👉 Changes are re-rendered as you type.
