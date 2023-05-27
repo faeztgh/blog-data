@@ -1,5 +1,0 @@
-# First
-
-`code example`
-
-lorem ipsum
