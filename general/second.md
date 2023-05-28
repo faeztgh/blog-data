@@ -1,8 +1,15 @@
-<!--
-Notes for maintaining this document:
-
-*   Update the link for `cm-html` once in a while
--->
+<meta>
+{
+    "meta": {
+"title":"test",
+"description": "some description",
+"thumbnail": "https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?w=740&t=st=1685208204~exp=1685208804~hmac=e10345cfceff3550f6efee34e9a97c807295b0d3535adca38f2d8a777f01fcc5",
+"author":"Faez Tgh",
+"authorAvatar": "https://avatars.githubusercontent.com/u/50200066?s=400&u=f52a5be08dfaf61e43bc12ef4470dd7859f7dd2f&v=4",
+"date":"12-06-2021"
+    }
+}
+<meta>
 
 # react-markdown
 
@@ -18,40 +25,43 @@ React component to render markdown.
 
 ## Feature highlights
 
-*   [x] **[safe][security] by default**
-    (no `dangerouslySetInnerHTML` or XSS attacks)
-*   [x] **[components][]**
-    (pass your own component to use instead of `<h2>` for `## hi`)
-*   [x] **[plugins][]**
-    (many plugins you can pick and choose from)
-*   [x] **[compliant][syntax]**
-    (100% to CommonMark, 100% to GFM with a plugin)
+- [x] **[safe][security] by default**
+        (no `dangerouslySetInnerHTML` or XSS attacks)
+- [x] **[components][]**
+        (pass your own component to use instead of `<h2>` for `## hi`)
+- [x] **[plugins][]**
+        (many plugins you can pick and choose from)
+- [x] **[compliant][syntax]**
+        (100% to CommonMark, 100% to GFM with a plugin)
 
 ## Contents
 
-*   [What is this?](#what-is-this)
-*   [When should I use this?](#when-should-i-use-this)
-*   [Install](#install)
-*   [Use](#use)
-*   [API](#api)
-    *   [`props`](#props)
-    *   [`uriTransformer`](#uritransformer)
-*   [Examples](#examples)
-    *   [Use a plugin](#use-a-plugin)
-    *   [Use a plugin with options](#use-a-plugin-with-options)
-    *   [Use custom components (syntax highlight)](#use-custom-components-syntax-highlight)
-    *   [Use remark and rehype plugins (math)](#use-remark-and-rehype-plugins-math)
-*   [Plugins](#plugins)
-*   [Syntax](#syntax)
-*   [Types](#types)
-*   [Compatibility](#compatibility)
-*   [Architecture](#architecture)
-*   [Appendix A: HTML in markdown](#appendix-a-html-in-markdown)
-*   [Appendix B: Components](#appendix-b-components)
-*   [Security](#security)
-*   [Related](#related)
-*   [Contribute](#contribute)
-*   [License](#license)
+- [react-markdown](#react-markdown)
+  - [Feature highlights](#feature-highlights)
+  - [Contents](#contents)
+  - [What is this?](#what-is-this)
+  - [When should I use this?](#when-should-i-use-this)
+  - [Install](#install)
+  - [Use](#use)
+  - [API](#api)
+    - [`props`](#props)
+    - [`uriTransformer`](#uritransformer)
+  - [Examples](#examples)
+    - [Use a plugin](#use-a-plugin)
+    - [Use a plugin with options](#use-a-plugin-with-options)
+    - [Use custom components (syntax highlight)](#use-custom-components-syntax-highlight)
+    - [Use remark and rehype plugins (math)](#use-remark-and-rehype-plugins-math)
+  - [Plugins](#plugins)
+  - [Syntax](#syntax)
+  - [Types](#types)
+  - [Compatibility](#compatibility)
+  - [Architecture](#architecture)
+  - [Appendix A: HTML in markdown](#appendix-a-html-in-markdown)
+  - [Appendix B: Components](#appendix-b-components)
+  - [Security](#security)
+  - [Related](#related)
+  - [Contribute](#contribute)
+  - [License](#license)
 
 ## What is this?
 
@@ -60,8 +70,8 @@ that it’ll safely render to React elements.
 You can pass plugins to change how markdown is transformed to React elements and
 pass components that will be used instead of normal HTML elements.
 
-*   to learn markdown, see this [cheatsheet and tutorial][cheat]
-*   to try out `react-markdown`, see [our demo][demo]
+- to learn markdown, see this [cheatsheet and tutorial][cheat]
+- to try out `react-markdown`, see [our demo][demo]
 
 ## When should I use this?
 
@@ -81,7 +91,7 @@ This package focusses on making it easy for beginners to safely use markdown in
 React.
 When you’re familiar with unified, you can use a modern hooks based alternative
 [`react-remark`][react-remark] or [`rehype-react`][rehype-react] manually.
-If you instead want to use JavaScript and JSX *inside* markdown files, use
+If you instead want to use JavaScript and JSX _inside_ markdown files, use
 [MDX][].
 
 ## Install
@@ -96,14 +106,14 @@ npm install react-markdown
 In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import ReactMarkdown from 'https://esm.sh/react-markdown@7'
+import ReactMarkdown from "https://esm.sh/react-markdown@7";
 ```
 
 In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import ReactMarkdown from 'https://esm.sh/react-markdown@7?bundle'
+    import ReactMarkdown from "https://esm.sh/react-markdown@7?bundle";
 </script>
 ```
 
@@ -112,11 +122,14 @@ In browsers with [`esm.sh`][esmsh]:
 A basic hello world:
 
 ```jsx
-import React from 'react'
-import ReactMarkdown from 'react-markdown'
-import ReactDom from 'react-dom'
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import ReactDom from "react-dom";
 
-ReactDom.render(<ReactMarkdown># Hello, *world*!</ReactMarkdown>, document.body)
+ReactDom.render(
+    <ReactMarkdown># Hello, *world*!</ReactMarkdown>,
+    document.body
+);
 ```
 
 <details>
@@ -124,7 +137,7 @@ ReactDom.render(<ReactMarkdown># Hello, *world*!</ReactMarkdown>, document.body)
 
 ```jsx
 <h1>
-  Hello, <em>world</em>!
+    Hello, <em>world</em>!
 </h1>
 ```
 
@@ -135,17 +148,17 @@ to use a plugin ([`remark-gfm`][gfm], which adds support for strikethrough,
 tables, tasklists and URLs directly):
 
 ```jsx
-import React from 'react'
-import ReactDom from 'react-dom'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
+import React from "react";
+import ReactDom from "react-dom";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-const markdown = `Just a link: https://reactjs.com.`
+const markdown = `Just a link: https://reactjs.com.`;
 
 ReactDom.render(
-  <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />,
-  document.body
-)
+    <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />,
+    document.body
+);
 ```
 
 <details>
@@ -153,7 +166,7 @@ ReactDom.render(
 
 ```jsx
 <p>
-  Just a link: <a href="https://reactjs.com">https://reactjs.com</a>.
+    Just a link: <a href="https://reactjs.com">https://reactjs.com</a>.
 </p>
 ```
 
@@ -167,48 +180,48 @@ The default export is `ReactMarkdown`.
 
 ### `props`
 
-*   `children` (`string`, default: `''`)\
+- `children` (`string`, default: `''`)\
     markdown to parse
-*   `components` (`Record<string, Component>`, default: `{}`)\
+- `components` (`Record<string, Component>`, default: `{}`)\
     object mapping tag names to React components
-*   `remarkPlugins` (`Array<Plugin>`, default: `[]`)\
+- `remarkPlugins` (`Array<Plugin>`, default: `[]`)\
     list of [remark plugins][remark-plugins] to use
-*   `rehypePlugins` (`Array<Plugin>`, default: `[]`)\
+- `rehypePlugins` (`Array<Plugin>`, default: `[]`)\
     list of [rehype plugins][rehype-plugins] to use
-*   `remarkRehypeOptions` (`Object?`, default: `undefined`)\
+- `remarkRehypeOptions` (`Object?`, default: `undefined`)\
     options to pass through to [`remark-rehype`][remark-rehype]
-*   `className` (`string?`)\
+- `className` (`string?`)\
     wrap the markdown in a `div` with this class name
-*   `skipHtml` (`boolean`, default: `false`)\
+- `skipHtml` (`boolean`, default: `false`)\
     ignore HTML in markdown completely
-*   `sourcePos` (`boolean`, default: `false`)\
+- `sourcePos` (`boolean`, default: `false`)\
     pass a prop to all components with a serialized position
     (`data-sourcepos="3:1-3:13"`)
-*   `rawSourcePos` (`boolean`, default: `false`)\
+- `rawSourcePos` (`boolean`, default: `false`)\
     pass a prop to all components with their [position][]
     (`sourcePosition: {start: {line: 3, column: 1}, end:…}`)
-*   `includeElementIndex` (`boolean`, default: `false`)\
+- `includeElementIndex` (`boolean`, default: `false`)\
     pass the `index` (number of elements before it) and `siblingCount` (number
     of elements in parent) as props to all components
-*   `allowedElements` (`Array<string>`, default: `undefined`)\
+- `allowedElements` (`Array<string>`, default: `undefined`)\
     tag names to allow (can’t combine w/ `disallowedElements`), all tag names
     are allowed by default
-*   `disallowedElements` (`Array<string>`, default: `undefined`)\
+- `disallowedElements` (`Array<string>`, default: `undefined`)\
     tag names to disallow (can’t combine w/ `allowedElements`), all tag names
     are allowed by default
-*   `allowElement` (`(element, index, parent) => boolean?`, optional)\
+- `allowElement` (`(element, index, parent) => boolean?`, optional)\
     function called to check if an element is allowed (when truthy) or not,
     `allowedElements` or `disallowedElements` is used first!
-*   `unwrapDisallowed` (`boolean`, default: `false`)\
+- `unwrapDisallowed` (`boolean`, default: `false`)\
     extract (unwrap) the children of not allowed elements, by default, when
     `strong` is disallowed, it and it’s children are dropped, but with
     `unwrapDisallowed` the element itself is replaced by its children
-*   `linkTarget` (`string` or `(href, children, title) => string`, optional)\
+- `linkTarget` (`string` or `(href, children, title) => string`, optional)\
     target to use on links (such as `_blank` for `<a target="_blank"…`)
-*   `transformLinkUri` (`(href, children, title) => string`, default:
+- `transformLinkUri` (`(href, children, title) => string`, default:
     [`uriTransformer`][uri-transformer], optional)\
     change URLs on links, pass `null` to allow all URLs, see [security][]
-*   `transformImageUri` (`(src, alt, title) => string`, default:
+- `transformImageUri` (`(src, alt, title) => string`, default:
     [`uriTransformer`][uri-transformer], optional)\
     change URLs on images, pass `null` to allow all URLs, see [security][]
 
@@ -229,10 +242,10 @@ In this case, [`remark-gfm`][gfm], which adds support for strikethrough, tables,
 tasklists and URLs directly:
 
 ```jsx
-import React from 'react'
-import ReactMarkdown from 'react-markdown'
-import ReactDom from 'react-dom'
-import remarkGfm from 'remark-gfm'
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import ReactDom from "react-dom";
+import remarkGfm from "remark-gfm";
 
 const markdown = `A paragraph with *emphasis* and **strong importance**.
 
@@ -246,12 +259,12 @@ A table:
 
 | a | b |
 | - | - |
-`
+`;
 
 ReactDom.render(
-  <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />,
-  document.body
-)
+    <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />,
+    document.body
+);
 ```
 
 <details>
@@ -259,33 +272,34 @@ ReactDom.render(
 
 ```jsx
 <>
-  <p>
-    A paragraph with <em>emphasis</em> and <strong>strong importance</strong>.
-  </p>
-  <blockquote>
     <p>
-      A block quote with <del>strikethrough</del> and a URL:{' '}
-      <a href="https://reactjs.org">https://reactjs.org</a>.
+        A paragraph with <em>emphasis</em> and{" "}
+        <strong>strong importance</strong>.
     </p>
-  </blockquote>
-  <ul>
-    <li>Lists</li>
-    <li>
-      <input checked={false} readOnly={true} type="checkbox" /> todo
-    </li>
-    <li>
-      <input checked={true} readOnly={true} type="checkbox" /> done
-    </li>
-  </ul>
-  <p>A table:</p>
-  <table>
-    <thead>
-      <tr>
-        <td>a</td>
-        <td>b</td>
-      </tr>
-    </thead>
-  </table>
+    <blockquote>
+        <p>
+            A block quote with <del>strikethrough</del> and a URL:{" "}
+            <a href="https://reactjs.org">https://reactjs.org</a>.
+        </p>
+    </blockquote>
+    <ul>
+        <li>Lists</li>
+        <li>
+            <input checked={false} readOnly={true} type="checkbox" /> todo
+        </li>
+        <li>
+            <input checked={true} readOnly={true} type="checkbox" /> done
+        </li>
+    </ul>
+    <p>A table:</p>
+    <table>
+        <thead>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+            </tr>
+        </thead>
+    </table>
 </>
 ```
 
@@ -299,17 +313,17 @@ second.
 [`remark-gfm`][gfm] has an option to allow only double tildes for strikethrough:
 
 ```jsx
-import React from 'react'
-import ReactMarkdown from 'react-markdown'
-import ReactDom from 'react-dom'
-import remarkGfm from 'remark-gfm'
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import ReactDom from "react-dom";
+import remarkGfm from "remark-gfm";
 
 ReactDom.render(
-  <ReactMarkdown remarkPlugins={[[remarkGfm, {singleTilde: false}]]}>
-    This ~is not~ strikethrough, but ~~this is~~!
-  </ReactMarkdown>,
-  document.body
-)
+    <ReactMarkdown remarkPlugins={[[remarkGfm, { singleTilde: false }]]}>
+        This ~is not~ strikethrough, but ~~this is~~!
+    </ReactMarkdown>,
+    document.body
+);
 ```
 
 <details>
@@ -317,7 +331,7 @@ ReactDom.render(
 
 ```jsx
 <p>
-  This ~is not~ strikethrough, but <del>this is</del>!
+    This ~is not~ strikethrough, but <del>this is</del>!
 </p>
 ```
 
@@ -332,11 +346,11 @@ In this case, we apply syntax highlighting with the seriously super amazing
 [**@conorhastings**][conor]:
 
 ```jsx
-import React from 'react'
-import ReactDom from 'react-dom'
-import ReactMarkdown from 'react-markdown'
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-import {dark} from 'react-syntax-highlighter/dist/esm/styles/prism'
+import React from "react";
+import ReactDom from "react-dom";
+import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 // Did you know you can use tildes instead of backticks for code in markdown? ✨
 const markdown = `Here is some JavaScript code:
@@ -344,32 +358,32 @@ const markdown = `Here is some JavaScript code:
 ~~~js
 console.log('It works!')
 ~~~
-`
+`;
 
 ReactDom.render(
-  <ReactMarkdown
-    children={markdown}
-    components={{
-      code({node, inline, className, children, ...props}) {
-        const match = /language-(\w+)/.exec(className || '')
-        return !inline && match ? (
-          <SyntaxHighlighter
-            {...props}
-            children={String(children).replace(/\n$/, '')}
-            style={dark}
-            language={match[1]}
-            PreTag="div"
-          />
-        ) : (
-          <code {...props} className={className}>
-            {children}
-          </code>
-        )
-      }
-    }}
-  />,
-  document.body
-)
+    <ReactMarkdown
+        children={markdown}
+        components={{
+            code({ node, inline, className, children, ...props }) {
+                const match = /language-(\w+)/.exec(className || "");
+                return !inline && match ? (
+                    <SyntaxHighlighter
+                        {...props}
+                        children={String(children).replace(/\n$/, "")}
+                        style={dark}
+                        language={match[1]}
+                        PreTag="div"
+                    />
+                ) : (
+                    <code {...props} className={className}>
+                        {children}
+                    </code>
+                );
+            },
+        }}
+    />,
+    document.body
+);
 ```
 
 <details>
@@ -377,10 +391,15 @@ ReactDom.render(
 
 ```jsx
 <>
-  <p>Here is some JavaScript code:</p>
-  <pre>
-    <SyntaxHighlighter language="js" style={dark} PreTag="div" children="console.log('It works!')" />
-  </pre>
+    <p>Here is some JavaScript code:</p>
+    <pre>
+        <SyntaxHighlighter
+            language="js"
+            style={dark}
+            PreTag="div"
+            children="console.log('It works!')"
+        />
+    </pre>
 </>
 ```
 
@@ -393,22 +412,22 @@ is used to support math in markdown, and a transform plugin
 ([`rehype-katex`][katex]) to render that math.
 
 ```jsx
-import React from 'react'
-import ReactDom from 'react-dom'
-import ReactMarkdown from 'react-markdown'
-import remarkMath from 'remark-math'
-import rehypeKatex from 'rehype-katex'
+import React from "react";
+import ReactDom from "react-dom";
+import ReactMarkdown from "react-markdown";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
-import 'katex/dist/katex.min.css' // `rehype-katex` does not import the CSS for you
+import "katex/dist/katex.min.css"; // `rehype-katex` does not import the CSS for you
 
 ReactDom.render(
-  <ReactMarkdown
-    children={`The lift coefficient ($C_L$) is a dimensionless coefficient.`}
-    remarkPlugins={[remarkMath]}
-    rehypePlugins={[rehypeKatex]}
-  />,
-  document.body
-)
+    <ReactMarkdown
+        children={`The lift coefficient ($C_L$) is a dimensionless coefficient.`}
+        remarkPlugins={[remarkMath]}
+        rehypePlugins={[rehypeKatex]}
+    />,
+    document.body
+);
 ```
 
 <details>
@@ -416,18 +435,20 @@ ReactDom.render(
 
 ```jsx
 <p>
-  The lift coefficient (
-  <span className="math math-inline">
-    <span className="katex">
-      <span className="katex-mathml">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">{/* … */}</math>
-      </span>
-      <span className="katex-html" aria-hidden="true">
-        {/* … */}
-      </span>
+    The lift coefficient (
+    <span className="math math-inline">
+        <span className="katex">
+            <span className="katex-mathml">
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    {/* … */}
+                </math>
+            </span>
+            <span className="katex-html" aria-hidden="true">
+                {/* … */}
+            </span>
+        </span>
     </span>
-  </span>
-  ) is a dimensionless coefficient.
+    ) is a dimensionless coefficient.
 </p>
 ```
 
@@ -439,12 +460,12 @@ We use [unified][], specifically [remark][] for markdown and [rehype][] for
 HTML, which are tools to transform content with plugins.
 Here are three good ways to find plugins:
 
-*   [`awesome-remark`][awesome-remark] and [`awesome-rehype`][awesome-rehype]
+- [`awesome-remark`][awesome-remark] and [`awesome-rehype`][awesome-rehype]
     — selection of the most awesome projects
-*   [List of remark plugins][remark-plugins] and
+- [List of remark plugins][remark-plugins] and
     [list of rehype plugins][rehype-plugins]
     — list of all plugins
-*   [`remark-plugin`][remark-plugin] and [`rehype-plugin`][rehype-plugin] topics
+- [`remark-plugin`][remark-plugin] and [`rehype-plugin`][rehype-plugin] topics
     — any tagged repo on GitHub
 
 ## Syntax
@@ -496,11 +517,11 @@ part until you hit the API section is required reading).
 to directly interact with unified.
 The processor goes through these steps:
 
-*   parse markdown to mdast (markdown syntax tree)
-*   transform through remark (markdown ecosystem)
-*   transform mdast to hast (HTML syntax tree)
-*   transform through rehype (HTML ecosystem)
-*   render hast to React with components
+- parse markdown to mdast (markdown syntax tree)
+- transform through remark (markdown ecosystem)
+- transform mdast to hast (HTML syntax tree)
+- transform through rehype (HTML ecosystem)
+- render hast to React with components
 
 ## Appendix A: HTML in markdown
 
@@ -512,21 +533,21 @@ can spare the bundle size (±60kb minzipped), then you can use
 [`rehype-raw`][raw]:
 
 ```jsx
-import React from 'react'
-import ReactDom from 'react-dom'
-import ReactMarkdown from 'react-markdown'
-import rehypeRaw from 'rehype-raw'
+import React from "react";
+import ReactDom from "react-dom";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 const input = `<div class="note">
 
 Some *emphasis* and <strong>strong</strong>!
 
-</div>`
+</div>`;
 
 ReactDom.render(
-  <ReactMarkdown rehypePlugins={[rehypeRaw]} children={input} />,
-  document.body
-)
+    <ReactMarkdown rehypePlugins={[rehypeRaw]} children={input} />,
+    document.body
+);
 ```
 
 <details>
@@ -534,7 +555,9 @@ ReactDom.render(
 
 ```jsx
 <div class="note">
-  <p>Some <em>emphasis</em> and <strong>strong</strong>!</p>
+    <p>
+        Some <em>emphasis</em> and <strong>strong</strong>!
+    </p>
 </div>
 ```
 
@@ -551,12 +574,12 @@ You can also change the things that come from markdown:
 
 ```jsx
 <ReactMarkdown
-  components={{
-    // Map `h1` (`# heading`) to use `h2`s.
-    h1: 'h2',
-    // Rewrite `em`s (`*like so*`) to `i` with a red foreground color.
-    em: ({node, ...props}) => <i style={{color: 'red'}} {...props} />
-  }}
+    components={{
+        // Map `h1` (`# heading`) to use `h2`s.
+        h1: "h2",
+        // Rewrite `em`s (`*like so*`) to `i` with a red foreground color.
+        em: ({ node, ...props }) => <i style={{ color: "red" }} {...props} />,
+    }}
 />
 ```
 
@@ -575,45 +598,45 @@ get `href` (and `title`) props, and `img` (image) an `src`, `alt` and `title`,
 etc.
 There are some extra props passed.
 
-*   `code`
-    *   `inline` (`boolean?`)
+- `code`
+  - `inline` (`boolean?`)
         — set to `true` for inline code
-    *   `className` (`string?`)
+  - `className` (`string?`)
         — set to `language-js` or so when using ` ```js `
-*   `h1`, `h2`, `h3`, `h4`, `h5`, `h6`
-    *   `level` (`number` between 1 and 6)
+- `h1`, `h2`, `h3`, `h4`, `h5`, `h6`
+  - `level` (`number` between 1 and 6)
         — heading rank
-*   `input` (when using [`remark-gfm`][gfm])
-    *   `checked` (`boolean`)
+- `input` (when using [`remark-gfm`][gfm])
+  - `checked` (`boolean`)
         — whether the item is checked
-    *   `disabled` (`true`)
-    *   `type` (`'checkbox'`)
-*   `li`
-    *   `index` (`number`)
+  - `disabled` (`true`)
+  - `type` (`'checkbox'`)
+- `li`
+  - `index` (`number`)
         — number of preceding items (so first gets `0`, etc.)
-    *   `ordered` (`boolean`)
+  - `ordered` (`boolean`)
         — whether the parent is an `ol` or not
-    *   `checked` (`boolean?`)
+  - `checked` (`boolean?`)
         — `null` normally, `boolean` when using [`remark-gfm`][gfm]’s tasklists
-    *   `className` (`string?`)
+  - `className` (`string?`)
         — set to `task-list-item` when using [`remark-gfm`][gfm] and the
         item1 is a tasklist
-*   `ol`, `ul`
-    *   `depth` (`number`)
+- `ol`, `ul`
+  - `depth` (`number`)
         — number of ancestral lists (so first gets `0`, etc.)
-    *   `ordered` (`boolean`)
+  - `ordered` (`boolean`)
         — whether it’s an `ol` or not
-    *   `className` (`string?`)
+  - `className` (`string?`)
         — set to `contains-task-list` when using [`remark-gfm`][gfm] and the
         list contains one or more tasklists
-*   `td`, `th` (when using [`remark-gfm`][gfm])
-    *   `style` (`Object?`)
+- `td`, `th` (when using [`remark-gfm`][gfm])
+  - `style` (`Object?`)
         — something like `{textAlign: 'left'}` depending on how the cell is
         aligned
-    *   `isHeader` (`boolean`)
+  - `isHeader` (`boolean`)
         — whether it’s a `th` or not
-*   `tr` (when using [`remark-gfm`][gfm])
-    *   `isHeader` (`boolean`)
+- `tr` (when using [`remark-gfm`][gfm])
+  - `isHeader` (`boolean`)
         — whether it’s in the `thead` or not
 
 Every component will receive a `node` (`Object`).
@@ -626,13 +649,13 @@ info.
 
 Optionally, components will also receive:
 
-*   `data-sourcepos` (`string`)
+- `data-sourcepos` (`string`)
     — see `sourcePos` option
-*   `sourcePosition` (`Object`)
+- `sourcePosition` (`Object`)
     — see `rawSourcePos` option
-*   `index` and `siblingCount` (`number`)
+- `index` and `siblingCount` (`number`)
     — see `includeElementIndex` option
-*   `target` on `a` (`string`)
+- `target` on `a` (`string`)
     — see `linkTarget` option
 
 ## Security
@@ -649,13 +672,13 @@ It lets you define your own schema of what is and isn’t allowed.
 
 ## Related
 
-*   [`MDX`](https://github.com/mdx-js/mdx)
-    — JSX *in* markdown
-*   [`remark-gfm`](https://github.com/remarkjs/remark-gfm)
+- [`MDX`](https://github.com/mdx-js/mdx)
+    — JSX _in_ markdown
+- [`remark-gfm`](https://github.com/remarkjs/remark-gfm)
     — add support for GitHub flavored markdown support
-*   [`react-remark`][react-remark]
+- [`react-remark`][react-remark]
     — modern hook based alternative
-*   [`rehype-react`][rehype-react]
+- [`rehype-react`][rehype-react]
     — turn HTML into React elements
 
 ## Contribute
@@ -673,111 +696,57 @@ abide by its terms.
 [MIT][license] © [Espen Hovlandsdal][author]
 
 [build-badge]: https://github.com/remarkjs/react-markdown/workflows/main/badge.svg
-
 [build]: https://github.com/remarkjs/react-markdown/actions
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/remarkjs/react-markdown.svg
-
 [coverage]: https://codecov.io/github/remarkjs/react-markdown
-
 [downloads-badge]: https://img.shields.io/npm/dm/react-markdown.svg
-
 [downloads]: https://www.npmjs.com/package/react-markdown
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/react-markdown.svg
-
 [size]: https://bundlephobia.com/result?p=react-markdown
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-discussions-success.svg
-
 [chat]: https://github.com/remarkjs/remark/discussions
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [esmsh]: https://esm.sh
-
 [health]: https://github.com/remarkjs/.github
-
 [contributing]: https://github.com/remarkjs/.github/blob/HEAD/contributing.md
-
 [support]: https://github.com/remarkjs/.github/blob/HEAD/support.md
-
 [coc]: https://github.com/remarkjs/.github/blob/HEAD/code-of-conduct.md
-
 [license]: license
-
 [author]: https://espen.codes/
-
 [micromark]: https://github.com/micromark/micromark
-
 [remark]: https://github.com/remarkjs/remark
-
 [demo]: https://remarkjs.github.io/react-markdown/
-
 [position]: https://github.com/syntax-tree/unist#position
-
 [gfm]: https://github.com/remarkjs/remark-gfm
-
 [math]: https://github.com/remarkjs/remark-math
-
 [katex]: https://github.com/remarkjs/remark-math/tree/main/packages/rehype-katex
-
 [raw]: https://github.com/rehypejs/rehype-raw
-
 [sanitize]: https://github.com/rehypejs/rehype-sanitize
-
 [remark-plugins]: https://github.com/remarkjs/remark/blob/main/doc/plugins.md#list-of-plugins
-
 [rehype-plugins]: https://github.com/rehypejs/rehype/blob/main/doc/plugins.md#list-of-plugins
-
 [remark-rehype]: https://github.com/remarkjs/remark-rehype
-
 [awesome-remark]: https://github.com/remarkjs/awesome-remark
-
 [awesome-rehype]: https://github.com/rehypejs/awesome-rehype
-
 [remark-plugin]: https://github.com/topics/remark-plugin
-
 [rehype-plugin]: https://github.com/topics/rehype-plugin
-
 [cm-html]: https://spec.commonmark.org/0.30/#html-blocks
-
 [uri]: https://github.com/remarkjs/react-markdown/blob/main/lib/uri-transformer.js
-
 [uri-transformer]: #uritransformer
-
 [react]: http://reactjs.org
-
 [cheat]: https://commonmark.org/help/
-
 [unified]: https://github.com/unifiedjs/unified
-
 [rehype]: https://github.com/rehypejs/rehype
-
 [react-remark]: https://github.com/remarkjs/react-remark
-
 [rehype-react]: https://github.com/rehypejs/rehype-react
-
 [mdx]: https://github.com/mdx-js/mdx/
-
 [typescript]: https://www.typescriptlang.org
-
 [security]: #security
-
 [components]: #appendix-b-components
-
 [plugins]: #plugins
-
 [syntax]: #syntax
-
 [react-syntax-highlighter]: https://github.com/react-syntax-highlighter/react-syntax-highlighter
-
 [conor]: https://github.com/conorhastings
-
 [esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
