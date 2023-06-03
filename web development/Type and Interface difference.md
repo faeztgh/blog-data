@@ -103,10 +103,7 @@ Both types and interfaces are powerful tools in TypeScript that allow you to def
 
 ## Show Your Support!
 
-Are you enjoying the content I’m putting out? If so, I would love for you to show your support by following, applauding, and commenting on my post!
-
-By following my account, you’ll be the first to know when I publish new content, and you’ll never miss a beat. Liking my posts lets me know that you appreciate the content I’m creating and commenting allows us to engage in a conversation and share our thoughts on the topic at hand.
-
-Your feedback means the world to me, and it also helps me improve my content to better meet your needs and interests. So, don’t be shy! Let me know what you think, and together, let’s build a community that inspires and uplifts one another.
-
-Thank you for your continued support! 🎉✨
+> Are you enjoying the content I’m putting out? If so, I would love for you to show your support by following, applauding, and commenting on my post!
+> By following my account, you’ll be the first to know when I publish new content, and you’ll never miss a beat. Liking my posts lets me know that you appreciate the content I’m creating and commenting allows us to engage in a conversation and share our thoughts on the topic at hand.
+> Your feedback means the world to me, and it also helps me improve my content to better meet your needs and interests. So, don’t be shy! Let me know what you think, and together, let’s build a community that inspires and uplifts one another.
+> Thank you for your continued support! 🎉✨
