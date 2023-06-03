@@ -4,7 +4,7 @@
             "id": "0",
             "accessor": "Type and Interface difference",
             "title": "Type and Interface difference",
-            "description": "First file description",
+            "description": "Article about Type and Interface difference",
             "thumbnail": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*CXvN1A3xx-Tp2fssesigxQ.png",
             "author": {
                 "name": "Faez Tgh",
@@ -15,45 +15,101 @@
         },
         {
             "id": "1",
-            "accessor": "second",
-            "title": "second",
-            "description": "second file description",
-            "thumbnail": "https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?w=740&t=st=1685208204~exp=1685208804~hmac=e10345cfceff3550f6efee34e9a97c807295b0d3535adca38f2d8a777f01fcc5",
+            "accessor": "All About Zustand!",
+            "title": "All About Zustand!",
+            "description": "Article about Zustand",
+            "thumbnail": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*XuyDEBPesOwMlT2XRNtCMg.png",
             "author": {
                 "name": "Faez Tgh",
                 "avatar": "https://avatars.githubusercontent.com/u/50200066?s=400&u=f52a5be08dfaf61e43bc12ef4470dd7859f7dd2f&v=4",
                 "url": "https://github.com/faeztgh"
             },
-            "authorAvatar": "https://avatars.githubusercontent.com/u/50200066?s=400&u=f52a5be08dfaf61e43bc12ef4470dd7859f7dd2f&v=4",
-            "date": "15-06-2021"
+
+            "date": "16-03-2023"
         },
         {
             "id": "2",
-            "accessor": "folder-first",
-            "title": "folder-first",
-            "description": "folder-first file description",
-            "thumbnail": "https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?w=740&t=st=1685208204~exp=1685208804~hmac=e10345cfceff3550f6efee34e9a97c807295b0d3535adca38f2d8a777f01fcc5",
+            "accessor": "Redux vs Zustand",
+            "title": "Redux vs Zustand",
+            "description": "Article about Redux vs Zustand: Which one to use for your next project file description",
+            "thumbnail": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*PsHuQSksXGecnrJInSG1Bg.png",
             "author": {
                 "name": "Faez Tgh",
                 "avatar": "https://avatars.githubusercontent.com/u/50200066?s=400&u=f52a5be08dfaf61e43bc12ef4470dd7859f7dd2f&v=4",
                 "url": "https://github.com/faeztgh"
             },
-            "authorAvatar": "https://avatars.githubusercontent.com/u/50200066?s=400&u=f52a5be08dfaf61e43bc12ef4470dd7859f7dd2f&v=4",
-            "date": "15-06-2021"
+
+            "date": "16-03-2023"
         },
         {
             "id": "3",
-            "accessor": "folder-second",
-            "title": "folder-second",
-            "description": "folder-second file description",
-            "thumbnail": "https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?w=740&t=st=1685208204~exp=1685208804~hmac=e10345cfceff3550f6efee34e9a97c807295b0d3535adca38f2d8a777f01fcc5",
+            "accessor": "The Importance of Clean Code",
+            "title": "The Importance of Clean Code",
+            "description": "Article about The Importance of Clean Code: Lessons from Robert C Martin’s Book",
+            "thumbnail": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*01Ow69biajcFIehC6rXsQQ.png",
             "author": {
                 "name": "Faez Tgh",
                 "avatar": "https://avatars.githubusercontent.com/u/50200066?s=400&u=f52a5be08dfaf61e43bc12ef4470dd7859f7dd2f&v=4",
                 "url": "https://github.com/faeztgh"
             },
-            "authorAvatar": "https://avatars.githubusercontent.com/u/50200066?s=400&u=f52a5be08dfaf61e43bc12ef4470dd7859f7dd2f&v=4",
-            "date": "15-06-2021"
+
+            "date": "16-03-2023"
+        },
+        {
+            "id": "4",
+            "accessor": "Programmers Health Care",
+            "title": "Programmers Health Care",
+            "description": "Article about Programmers Health Care",
+            "thumbnail": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*gQNl--13qxRCQX_txiyPbg.png",
+            "author": {
+                "name": "Faez Tgh",
+                "avatar": "https://avatars.githubusercontent.com/u/50200066?s=400&u=f52a5be08dfaf61e43bc12ef4470dd7859f7dd2f&v=4",
+                "url": "https://github.com/faeztgh"
+            },
+
+            "date": "16-03-2023"
+        },
+        {
+            "id": "5",
+            "accessor": "Magic Link Authentication",
+            "title": "Magic Link Authentication",
+            "description": "Article about Magic Link Authentication",
+            "thumbnail": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*W7LrNff-YmKSqz3L6itj-A.png",
+            "author": {
+                "name": "Faez Tgh",
+                "avatar": "https://avatars.githubusercontent.com/u/50200066?s=400&u=f52a5be08dfaf61e43bc12ef4470dd7859f7dd2f&v=4",
+                "url": "https://github.com/faeztgh"
+            },
+
+            "date": "17-03-2023"
+        },
+        {
+            "id": "6",
+            "accessor": "Magic Link Authentication",
+            "title": "Magic Link Authentication",
+            "description": "Article about Magic Link Authentication",
+            "thumbnail": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*W7LrNff-YmKSqz3L6itj-A.png",
+            "author": {
+                "name": "Faez Tgh",
+                "avatar": "https://avatars.githubusercontent.com/u/50200066?s=400&u=f52a5be08dfaf61e43bc12ef4470dd7859f7dd2f&v=4",
+                "url": "https://github.com/faeztgh"
+            },
+
+            "date": "17-03-2023"
+        },
+        {
+            "id": "7",
+            "accessor": "Is Java Still Alive in 2023",
+            "title": "Is Java Still Alive in 2023",
+            "description": "Article about Is Java Still Alive in 2023",
+            "thumbnail": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*x8NF-jBlFMPKKOCVVplTXA.png",
+            "author": {
+                "name": "Faez Tgh",
+                "avatar": "https://avatars.githubusercontent.com/u/50200066?s=400&u=f52a5be08dfaf61e43bc12ef4470dd7859f7dd2f&v=4",
+                "url": "https://github.com/faeztgh"
+            },
+
+            "date": "17-03-2023"
         }
     ]
 }
