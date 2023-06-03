@@ -1,5 +1,7 @@
 # TypeScript: Understanding Types and Interfaces
 
+![Article header image](https://miro.medium.com/v2/resize:fit:640/format:webp/1*CXvN1A3xx-Tp2fssesigxQ.png)
+
 TypeScript is a popular programming language used for developing robust applications. One of the key features of TypeScript is its ability to use types and interfaces to define the structure of data in a program. In this article, we’ll explore the difference between types and interfaces in TypeScript and provide multiple examples to help you understand their usage.
 
 ## Types in TypeScript
