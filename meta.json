@@ -15,8 +15,8 @@
         },
         {
             "id": "1",
-            "accessor": "All About Zustand!",
-            "title": "All About Zustand!",
+            "accessor": "All About Zustand",
+            "title": "All About Zustand",
             "description": "Article about Zustand",
             "thumbnail": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*XuyDEBPesOwMlT2XRNtCMg.png",
             "author": {
